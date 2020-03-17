@@ -1,0 +1,647 @@
+/*
+COMANDOS DO CSS3:
+1 - font-size = tamalho da fonte;
+2 - margin = define a área de margem nos quatro lados do elemento; 
+3 - padding =  Preenchimento - Espaçamento dentro dos limites do conteúdo;
+4 - max-width = estabelece a largura máxima de um elemento;
+5 - clear: especifica se um elemento pode ter elementos flutuantes ao seu lado ou se devem ser movidos para abaixo dele (clear).both = É uma palavra-chave que indica que o elemento será movido para baixo para limpar os elementos flutuantes do lado esquerdo e direito;
+6 - divider (div) : é um divisor de espaços;
+7 - background = fundo;
+8 - width = determina a largura da área de conteúdo de um elemento;
+9 - background-repeat = Repete a imagem vertical e horizontalmente, no-repeat = Não repete a imagem;
+10 - margin:auto = indica o espaço acima do elemento. Valores negativos são aceitos;
+11 - text-transform = defina os efeitos de capitalização (maiúsculas, minúsculas) do texto,
+12 - capitalize = Causa o efeito de transformar as primeiras letras das palavras do texto em maiúscula,
+13 - uppercase = Causa o efeito de transformar todas as letras das palavras do texto em maiúscula;
+14 - font-weight = especifica o peso ou a intensidade da fonte (ex.: negrito = bold);
+15 - color = cor;
+16 - line-height = permite controlar o espaçamento entre as linhas de um texto;
+background-attachment = determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.(fixed = Essa chave significa que o background é fixo em relação ao viewport.);
+17 - a:hover = define o estilo do link quando passa-se o mouse sobre ele;
+18 - text-decoration = é usada para definir a formatação de  underline, overline, line-through ou blink. As decorações underline e overline são posicionadas abaixo e acima do texto (respectivamente), e line-through cortando-o. (none = Sem decoração);
+19 - !important = efeito cascata;
+20 - border-raidus = Essa propriedade permite definir como bordas arredondadas são;
+21 - text-align = descreve como conteúdo inline, como texto, é alinhado no elemento pai em bloco. text-align não controla o alinhamento de elementos em bloco, apenas o seu conteúdo inline. (center = O conteúdo embutido é centralizado na caixa de linha).
+22 - height = A propriedade height do CSS determina a altura da área do conteúdo de um elemento. A área de conteúdo consiste no padding, margin e border do elemento.
+23 - min-height = é usado para definir a altura mínima de um determinado elemento. Ele impede que o valor usado da propriedade height se torne menor que o valor especificado para min-height.
+24 - float: determina que um elemento deve ser retirado do seu fluxo normal e colocado ao longo do lado direito ou esquerdo do seu containêr, onde textos  e elementos em linha irão se posicionar ao seu redor. (left = É uma palavra-chave que indica que o elemento deve flutuar à esquerda do bloco.); 
+25 - list-style = é uma propriedade para configurar o estilo da lista. 
+26 - margin-top = indica o espaço acima do elemento. Valores negativos são aceitos.
+27 - display = display é a propriedade mais importante do CSS para controlar o layout. (inline = Um elemento com valor inline é sempre chamado de elemento de linha.);
+28 - position = define alternativas para posicionar elementos, projetados para serem úteis em efeitos de animações.(absolute = se utiliza do ponto superior esquerdo de outros elementos. Estes elementos são os parentes dele do elemento com position absolute. Mais especificamente o pai.), (relative = Todos os positions precisam de um ponto para iniciar o cálculo da coordenada para assim posicionar o elemento na tela. Ao contrário do que muitos acham, esse ponto não é o ponto central do elemento, o ponto base é o canto superior esquerdo do elemento. A partir deste canto, o browser irá calcular a coordenada que você definiu e irá posicionar o elemento no viewport.)
+29 - z-index = trabalha com um eixo que não é muito conhecido e tampouco usado pela maioria dos desenvolvedores, o eixo Z. O eixo Z é o eixo responsável pelo cálculo e posicionamento da profundidade de algum elemento, ou seja, é aquele que irá determinar se o elemento estará mais próximo ou mais afastado da tela.
+30 - top = Topo;
+31 - left = esquerda;
+32 - opacity = especifica a transparência de um elemento, isto é, o grau no qual o background atrás do elemento é sobreposto;
+33 - cursos = especifica o cursor do mouse mostrado quando o ponteiro do mouse está sobre um elemento. (pointer =  Usado quando pairando o cursor sobre links, tipicamente uma mão.)
+*/
+
+@font-face{ /*SELETOR PARA SELECIONAR AS FONTS */
+	font-family: 'Roboto';
+	src: url("lib/fonts/Roboto/Roboto-Regular.ttf");
+	font-size: 1em; /* tamanho padrão pra font no ccs medida relativa medida adaptavel */
+}
+
+@font-face{
+	font-family: 'PT_Sans';
+	src: url("lib/fonts/PT_Sans/PTSans-Bold.ttf");
+	font-size: 1em;
+}
+
+
+
+/*HEADER*/
+.oculta{
+	font-size: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+img.logo{
+	max-width: 150px;
+	margin-top: 1px;
+	margin-left: -150px;
+}
+
+.container-pneu{
+	position: absolute;
+	margin-left: 900px;
+}
+
+img.gripmaster{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin-top: 2px;
+   
+}
+
+.header{
+	background-color: #000;
+	float: left;
+	width: 100%;
+	height: 80px;
+	padding: 50px;
+}
+
+.navbar-inverse .navbar-toggle {/* botão do menu */
+    border-color: #333;
+    margin-top: 20px;
+
+}
+
+.navbar-inverse { /*cor do menu */
+    background-color: rgba(0, 0, 0, 1);
+    border-color: #080808;
+}
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+    right: 0;
+	left: 0;
+	z-index: 1030;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #101010;
+}
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: -55px;
+    margin-left: -55px;
+}
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+    max-height: 100px;
+}
+.navbar-collapse.in {
+    overflow-y: auto;
+}
+
+
+.logo{
+	float: left;
+	margin-left: 150px; 
+	margin-top: -10px;
+}
+
+.fa{
+	color: #fff;
+	width: 20px;
+	font-size: 100px;
+}
+
+.fone p{
+	font-size: 16px;
+	color: #fff;
+	margin-left: 15px;
+	margin-top: 40px;
+}
+
+.menu li a{
+	margin-top: 16px;
+	font-size: 14px;
+	
+}
+
+/*BACKGROUNDS*/
+.background-empresa{
+	background-color: #326799;
+}
+
+.background-produtos{
+	background-color: #326799;
+}
+
+.background-pneus{
+	background-color: #326799;
+}
+
+.background-contato{
+	background-color: #000;
+}
+
+/*CORES*/
+.color-white{
+	color:#FFFFFF;
+}
+
+.color-black{
+	color: #000000;
+}
+
+/*TITULOS E DESCRIÇÕES*/
+.titulo{
+	color: #fff;	
+	font-weight: bold;
+	font-family: 'PT_Sans';
+	font-size: 40px;
+  	margin-top: -10px;
+  	text-align: left;
+}
+
+
+.descricao{
+	text-align: left;
+  	color: #fff;
+  	line-height: 25px;
+	font-size: 17px;
+	font-family: 'Roboto';  
+  	margin: 5px;
+}
+
+
+
+/*linhas*/
+.linha-empresa{
+	border: #fddd00 solid 1px;/**/
+	width: 250px; /*largura*/
+	margin-left: 3px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.linha-produto{
+	border: #fddd00 solid 1px;/**/
+	width: 250px; /*largura*/
+	margin-left: 3px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.linha-novidades{
+	border: #fddd00 solid 1px;/**/
+	width: 250px; /*largura*/
+	margin-left: 3px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.linha-contatos{
+	text-align: center;
+	border: #fddd00 solid 1px;/**/
+	width: 250px; /*largura*/
+	margin-left: 3px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+/*PADDINGS*/
+.padding-10{padding: 10px 0px}
+.padding-20{padding: 20px 0px}
+.padding-30{padding: 30px 0px}
+.padding-40{padding: 40px 0px}
+.padding-50{padding: 50px 0px}
+.padding-60{padding: 60px 0px}
+.padding-70{padding: 70px 0px}
+.padding-80{padding: 80px 0px}
+
+/*empresa*/
+.empresa{
+
+}
+
+/*produtos*/
+.produtos{
+	padding: 40px !important;
+}
+
+.hyster{
+	height: 35px;
+	width: 35px;
+	border: #336799 1px solid;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.clarck{
+	height: 30px;
+	width: 45px;
+	border: #336799 1px solid;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.mitsubishi{
+	height: 35px;
+	width: 35px;
+	border: #336799 1px solid;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.toyota{
+	height: 30px;
+	width: 45px;
+	border: #336799 1px solid;
+	border-radius: 4px;
+	text-align: center;
+}
+/* NOVIDADES */
+.novidades{
+	padding: 10px !important;
+}
+.img-novidades{
+	max-width: 100%;
+	max-height: 100%;
+	margin-left: -10px;
+	border-radius: 12px;
+	position: relative;
+}
+
+.titulo-novidades{
+	color: #fff;
+  	font-weight: bold;
+  	margin-top: -10px;
+	text-align: left;
+	font-family: 'PT_Sans';
+	font-size: 40px;
+	max-height: 400%;
+  	
+}
+
+.descricao-novidades{
+	text-align: left;
+  	color: #fff;
+  	line-height: 25px;
+	margin: 5px;
+	font-size: 20px;
+	font-family: 'Roboto';    
+}
+/*Produtos*/
+.img-produtos{
+	width: 100%;
+	position: relative;
+	z-index: 0;
+	float: left;
+	top: 0;
+	left: 1000;
+	padding: 50px;
+	border-radius: 10px;
+	
+}
+
+/* CARD COM ZOOM */
+
+.hoverzoom {
+    position: relative;
+    width: 325px;
+    height: 200px;
+	overflow: hidden;
+	margin-left: -35px;
+	margin-top: -45px;
+	margin-bottom: -25px;
+	
+}
+.hoverzoom img {
+	
+    max-width: 100%;
+    border-radius: 2px;
+    -webkit-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    -ms-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    -o-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+}
+.hoverzoom:hover img {
+	-webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+	transform: scale(1.5);
+	
+}
+.hoverzoom .retina{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;    
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);    
+    border-radius: 2px;
+    text-align: center;
+    padding: 30px;
+
+    -webkit-transition:	 all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    -ms-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    -o-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000); 
+}
+.hoverzoom:hover .retina {
+    opacity: 1;
+    box-shadow: inset 0 0 100px 50px rgba(0,0,0,.5);
+    
+}
+
+.titulo-detalhe-produtos{
+	font-size: 22px;
+	font-weight: bold;
+	color: #FFF;
+}
+
+.descricao-produtos{
+	color: #FFF;
+	font-size: 15px;
+}
+
+.descricao-produtos{
+    color: #fff;
+}
+
+/* .hoverzoom .retina a {
+    display: block;
+    width: 150px;
+    background: #6fc5e9;
+    border: 1px solid #59afd4;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 16px auto 0;
+} */
+
+
+
+/*CONTATO*/
+.contato{
+	margin-top: -5px;
+}
+
+.titulo-contatos{
+	color: #fff;
+  	font-weight: bold;
+  	margin-top: -10px;
+	text-align: left;
+	font-family: 'PT_Sans';
+	font-size: 40px;
+	
+}
+
+footer{
+	margin-top: 110px; /* serve para deixar uma altura entre os 2 botoões,quais botões shop e register, rodapé.*/
+}
+
+footer .row{/*USA-SE  o .row para configurar a largura do rodapé*/
+	width: 100%; /*serve para não criar uma rolagem na tela, um schroll horizontal.isso serve para o rodapé não ultrapassar os 100% de largura do monitor.*/
+	margin-left: 0px; /*A margin left de 0px ajusta o rodapé no seu posicionamento.*/
+}
+
+footer .row p{/*Tirar a margem inferior do rodapé, ou seja, uma linha branca que fica na parte de baixo da tela ou na parte inferior do rodapé*/
+	
+}
+
+footer .fundo-preto{
+	position: absolute;
+	height: 500px;
+	background-color: #000;
+}
+
+footer iframe{
+	height: 380px;
+	width: 280px;
+}
+
+footer .logotipo{
+	margin-top: 50px;
+	margin-left: -50px;
+	height: 150px;
+}
+
+footer .col-telefone ul{
+	text-align: center;
+	margin-left: -3px;
+	
+
+}
+
+footer .col-endereco,
+footer .col-telefone,
+footer .col-form{
+	margin-top: 40px;/*A MARGIN-TOP é uma margin que fornece uma distância entre a margin de cima do rodapé e as palavras: POPULAR POST, LINKS e GET IN TOUCH*/
+}
+
+footer .row-cols h4 {
+	text-align: center;
+	font-size: 16px;
+	font-family: 'PT_Sans';
+	color: #fff;
+	padding-bottom: 17px;/*O PADDING-BOTTOM é uma margin interna, que fica entre a palavra POPULAR POST, LINKS e GET IN TOUCH. e a linha inserida antes do primeiro link, abaixo do POPULAR POST.*/
+	border-bottom: #336799 2px solid;/*A propriedade BORDER-BOTTOM #242D37 1px solid insere uma linha abaixo de POPULAR POST,LINKS E GET IN TOUCH*/
+}
+
+footer .col-telefone a{
+	color: #fff;
+	font-size: 14px;
+}
+
+footer .col-telefone .fa{
+	margin: 0 6px; /* 0(top e bottom) 6px(left e right)*/
+}
+
+footer .col-form p{
+	color: #fff;
+	text-align: center;
+	font-size: 15px;
+}
+
+/*FORMS*/
+form.top-emp-form{
+	max-width: 300px;
+	margin: 0px auto;
+}
+
+form.top-emp-form input{
+	width: 100%;
+	margin: 5px;
+	height: 50px;
+	padding: 5px;
+	border: none;
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+}
+
+form.top-emp-form textarea{
+	padding: 5px;
+	border: none;
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	min-height: 120px;
+	margin: 5px;
+}
+
+form.top-emp-form input[type="submit"]{
+	background: #336799;
+	color: #fff;
+	font-size: 18px;
+	width: 110px;
+	border-radius: 2px;
+}
+
+form.top-emp-form input[type="submit"]:hover{
+	background: #fff;
+	color: #336799;
+}
+
+
+
+/*COPY*/
+div.copyright{
+	background-color: #333;
+	margin: 0px;
+	padding: 12px;
+	margin-top: -36px;
+}
+
+p.copyright{
+	color: #FFF;
+	margin: 0px;
+	font-size: 11px;
+}
+
+/*ABAS DE PRODUTOS*/
+/*ABAS*/
+
+
+.nav_tabs{
+    width: 100%;
+    height: 400px;
+    margin-left: -100px;
+    background-color: #336799;
+    /*position: absolute;*/
+}
+
+.nav_tabs ul{
+    list-style: none;
+}
+
+.nav_tabs ul li{
+	float: left;
+}
+
+.nav_tabs #label{
+    width: 150px;
+    height: 65px;
+    padding: 10px;
+    background-color: #336799;
+    font-size: 18px;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+	text-align: center;
+}
+
+.rd_tabs:checked ~ #label{
+	background-color: skyblue;
+	border-radius: 5px;
+}
+
+.rd_tabs{
+    display: none;
+}
+
+.content{
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    max-width: 100%;
+	left: auto;
+}
+
+.content{
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    width: 100%;
+    margin: 0px 0px;
+
+}
+
+.rd_tabs:checked ~ .content{
+    display: block;
+}
+
+/*conteudo da XML*/
+#header_menu{
+
+}
+
+#h3_titulo{
+    text-align: center;
+	font-size: 24px;
+	color: white;
+}
+
+#h3_sub_titulo{
+    text-align: left;
+    font-size: 22px;
+    
+}
+
+#linha_menu{
+    border-top: 1px solid #fddd00;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#conteudo_menu{
+    width: 100%;
+    padding: 10px 10px;
+    margin: 0;
+}
+
+#conteudo_menu2{
+    width: 100%;
+    padding: 10px 10px;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
