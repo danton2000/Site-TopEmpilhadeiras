@@ -541,6 +541,19 @@ p.copyright{
 	font-size: 11px;
 }
 
+p.bitcom{
+	text-align: center;
+}
+
+.link{
+	color: #fff !important;
+}
+
+.link:hover{
+	color: rgba(50,103,153,1) !important;
+}
+
+
 /*ABAS DE PRODUTOS*/
 /*ABAS*/
 
